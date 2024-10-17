@@ -20,11 +20,15 @@
                 <div id="options-container">
                     <div class="form-group">
                         <label for="course-select">Select Course</label>
-                        <select class="form-control" id="course-select"></select>
+                        <select class="form-control" id="course-select">
+                            <option value="">Loading courses...</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="tee-box-select">Select Tee Box</label>
-                        <select class="form-control" id="tee-box-select"></select>
+                        <select class="form-control" id="tee-box-select" disabled>
+                            <option value="">Select a course first</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -34,19 +38,44 @@
             <div class="col-lg-12" id="scorecard-container">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="front-nine">
+                        <thead>
+                            <tr>
+                                <th>Hole</th>
+                                <th>Par</th>
+                                <th>Yards</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Front Nine Table Rows Will Be Inserted Here -->
+                        </tbody>
                     </table>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="back-nine">
+                        <thead>
+                            <tr>
+                                <th>Hole</th>
+                                <th>Par</th>
+                                <th>Yards</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Back Nine Table Rows Will Be Inserted Here -->
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- External JS libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
 </body>
 </html>
